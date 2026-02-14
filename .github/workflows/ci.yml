@@ -1,4 +1,4 @@
-name: mt3dms checks
+name: mt3dms CI/CD
 on:
   # run at 6 AM UTC every day
   schedule:
@@ -18,7 +18,7 @@ env:
   PROGRAM_NAME: mt3dms
 jobs:
   build:
-    name: Build and Test on ${{ matrix.os }} with ${{ matrix.compiler }} ${{ matrix.version }}
+    name: ${{ matrix.os }} ${{ matrix.compiler }} ${{ matrix.version }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -69,7 +69,7 @@ jobs:
         if: ${{ matrix.release == 'yes' && runner.os == 'Linux' }}
         working-directory: ${{ env.PROGRAM_NAME }}
         run: |
-          zip -r ${{ env.PROGRAM_NAME }}_source.zip meson.build true-binary/
+          zip -r ${{ env.PROGRAM_NAME }}_source.zip meson.build src/
           ls -lha *.zip
 
       # static link gfortran libs
@@ -182,6 +182,6 @@ jobs:
           tag: v${{ env.PROGRAM_VERSION }}
           name: "${{ env.PROGRAM_NAME }} executables"
           artifacts: "${{ env.DIST }}/*"
-          draft: false
+          draft: true
           allowUpdates: true
           token: ${{ secrets.GITHUB_TOKEN }}
