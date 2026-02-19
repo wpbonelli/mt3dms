@@ -9,7 +9,7 @@ MT3DMS has significantly expanded capabilities, including the addition of, 1) a 
 
 Additional information on MT3DMS can be found at [https://hydro.geo.ua.edu/mt3d/index.htm](https://hydro.geo.ua.edu/mt3d/index.htm).
 
-## Retrieval
+## Source
 
 Downloaded as a self-extracting executable file (`mt3dms_530.exe`) on July 3, 2023 from [https://hydro.geo.ua.edu/mt3d/index.htm](https://hydro.geo.ua.edu/mt3d/index.htm).
 
@@ -17,4 +17,4 @@ Only the source files in the `mt3dms5.3.0/src/true-binary/` subdirectory availab
 
 ## Disclaimer
 
-This repository is provided as a courtesy. Modifications may have been made, e.g. to version strings, or syntax/language constructs for compatibility with modern compilers and build systems. Use this resource at your own risk; it should be regarded as provisional and not as an authoritative substitute for the official software release by the original authors.
+This repository is provided as a courtesy and is not actively maintained. Modifications to the original source may have been made. Use this resource at your own risk; it should be regarded as provisional and not as an authoritative substitute for the official software release by the original authors.
